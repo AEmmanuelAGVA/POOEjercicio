@@ -54,8 +54,8 @@ public class Student {
     	 }
 
      }
- 	public void enroll(Student student){
-		registrados.add(student);   
+ 	public void enroll(Courses course){
+		registrados.add(course);   
 		//TODO add the student to the collection
 	   }
 	

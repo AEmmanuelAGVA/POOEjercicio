@@ -31,6 +31,12 @@ public class Courses {
 	   }
 			   
 	public int bestGrade(){
-	       return 0;
+		int gradoMax = 0;
+		for (Student student : estudiantes) {
+			if(gradoMax < student.grade) {
+				gradoMax = student.grade;
+			}
+		}
+	       return gradoMax;
 	   }	
 }

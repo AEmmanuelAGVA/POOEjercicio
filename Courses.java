@@ -12,31 +12,34 @@ public class Courses {
 		this.professorName = professorName;
 		this.year = year;
 		
-	}
+	}//Course
 
 	public void enroll(Student estudiante){
 		estudiantes.add(estudiante);   
-		//TODO add the student to the collection
-	   }
+	   }//enRoll
 	
 	public void unEnroll(Student estudiante){
 		estudiantes.remove(estudiante);
-	       //TODO remove this student from the collection
-	       // Hint: check if that really is this student
-	   }
+	   }//unEnroll
 			
 	public int countStudents(){
 	       int totalregistrados = estudiantes.size();
 	       return totalregistrados;
-	   }
+	   }//CountStudent
 			   
 	public int bestGrade(){
 		int gradoMax = 0;
 		for (Student student : estudiantes) {
 			if(gradoMax < student.grade) {
 				gradoMax = student.grade;
-			}
-		}
+			}//IF
+		}//For
 	       return gradoMax;
-	   }	
-}
+	   }//BestGrade
+	
+	public void enroll(Student[] students){
+	    for (Student student : students) {
+	    	enroll(student);
+		}
+	   }//Overload
+}//Class
